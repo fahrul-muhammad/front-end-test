@@ -1,0 +1,23 @@
+.container {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  background-color: #5b95ed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition: all 1s;
+
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.container:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.btn-text {
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+}
