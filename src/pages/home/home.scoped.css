@@ -1,0 +1,87 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-color: antiquewhite; */
+}
+
+.container:hover {
+  cursor: pointer;
+}
+
+.inputSearch {
+  background-color: rgb(219, 219, 219);
+  border: none;
+  height: 5vh;
+  width: 50%;
+  border-radius: 50px;
+  margin-top: rem;
+  padding-left: 2rem;
+}
+
+.inputSearch::placeholder {
+  text-align: center;
+  font-size: 15px;
+}
+
+.post {
+  color: rgb(115, 115, 115);
+  border-bottom: 2px solid #5b95ed;
+  /* width: 10%; */
+  text-align: center;
+}
+
+.box-container {
+  /* border: 1px solid #999; */
+  margin-top: 1rem;
+  min-height: 7vh;
+  min-width: 80vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid #5b95ed; */
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.box-comment {
+  /* border: 1px solid #999; */
+  /* margin-top: 1rem; */
+  height: 100%;
+  width: 80%;
+}
+
+.name {
+  font-weight: 700;
+  color: #000;
+}
+
+.grey-text {
+  color: rgb(89, 89, 89);
+}
+
+.icon-comment {
+  color: #5b95ed;
+}
+
+.icon-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  /* background-color: antiquewhite; */
+  width: 10%;
+  justify-content: space-between;
+}
+
+.total-comment {
+  color: #5b95ed;
+  padding: 0;
+  margin: 0;
+  font-weight: 600;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 100, "wght" 600, "GRAD" 0, "opsz" 48;
+}

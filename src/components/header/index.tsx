@@ -11,7 +11,7 @@ const Header = () => {
       >
         <p className="header-title">Cinta Coding</p>
         <div className="btn-container">
-          <PrimaryButton btnText="Login" onClick={undefined} />
+          <PrimaryButton btnText="Login" onClick={undefined} href="/login" />
         </div>
       </div>
     </>

@@ -5,6 +5,7 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import { saveData } from "../../redux/slice/auth";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 type Results = {
   data: [];
@@ -16,6 +17,7 @@ const Login = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isSuccess, setIsSuccess] = useState<boolean>(true);
   const dispatch = useDispatch();
+  const navigation = useNavigate();
 
   const getUserData = async () => {
     try {
@@ -31,6 +33,9 @@ const Login = () => {
       if (Login.length > 0) {
         toast.success("Login Success!", { theme: "colored" });
         dispatch(saveData(Login));
+        setTimeout(() => {
+          navigation("/home");
+        }, 2000);
       }
       if (Login.length <= 0) {
         toast.error("Login Error!", { theme: "colored" });
@@ -42,7 +47,7 @@ const Login = () => {
   };
 
   useEffect(() => {
-    getUserData();
+    // getUserData();
   }, []);
   return (
     <>
@@ -56,7 +61,7 @@ const Login = () => {
             <input type="email" className="input" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
             <input type="password" className="input" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
             <div className="btn-wrapper">
-              <PrimaryButton btnText="Login" onClick={() => getUserData()} />
+              <PrimaryButton btnText="Login" onClick={() => getUserData()} href={undefined} />
             </div>
             <ToastContainer />
           </>

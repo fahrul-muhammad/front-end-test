@@ -2,7 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { persistReducer, persistStore, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from "redux-persist";
 import { persistConfig, rootReducer } from "./reducers/index";
 import logger from "redux-logger";
-import thunk from "redux-thunk";
+import thunk from "redux-thunk"; 
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
